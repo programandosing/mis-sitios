@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio - video</title>
+</head>
+<body>
+    <!--todos estos atributos se usa en audio y video ambos 
+        controls -> en el video permite controlar el video si no no reproduce el audio del video
+         controls -> en audio  no aparece nada
+         muted -> va estar automaticamente silencioado 
+         autoplay -> se reproduce automaticamente
+         poster -> direccióna a una url de una imagenen, poner una imagen 
+         de portada antes de que el video se repproduzaca, no se debe poner
+         autoplay en este caso.
+         loop -> una ves q termina el video se vuelve a reproducir
+    -->
+    <h1>Audio & video</h1>
+    <video src="./assets/patrocinador.mp4" width="400" 
+    controls muted loop poster="./assets/portada.jpg" ></video>
+
+    <h2>Canción</h2>
+    <audio src="./assets/Demon.mp3" controls muted loop></audio>
+    <h2>reproduce automáticamente</h2>
+    <audio src="./assets/Demon.mp3" controls loop autoplay></audio>
+</body>
+</html>
