@@ -1,0 +1,84 @@
+body {
+    background-color: #fff9e6;
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.ventana {
+    width: 440px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff9e6;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #ff6600;
+    font-size: 22px;
+}
+
+.pantalla {
+    display: block;
+}
+
+.oculto {
+    display: none;
+}
+
+.descripcion {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #ff6600;
+}
+
+.puntos {
+    color: #004d00;
+    font-weight: bold;
+}
+
+.boton {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.facil { background-color: #b3ffb3; color: #004d00; }
+.medio { background-color: #ffff99; color: #665500; }
+.dificil { background-color: #ff9999; color: #660000; }
+.volver { background-color: #cccccc; color: #000; }
+.comprobar { background-color: #99ccff; color: #003366; }
+.salir { background-color: #cccccc; color: #333; }
+
+.boton:hover {
+    opacity: 0.8;
+}
+
+.mensaje {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.imagen {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.premio {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+}

@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio - video</title>
+    <title>¡Juego de Tablas de Multiplicar!</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.9.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.9.1/core.js"></script>
 </head>
+
 <body>
-    <!--todos estos atributos se usa en audio y video ambos 
-        controls -> en el video permite controlar el video si no no reproduce el audio del video
-         controls -> en audio  no aparece nada
-         muted -> va estar automaticamente silencioado 
-         autoplay -> se reproduce automaticamente
-         poster -> direccióna a una url de una imagenen, poner una imagen 
-         de portada antes de que el video se repproduzaca, no se debe poner
-         autoplay en este caso.
-         loop -> una ves q termina el video se vuelve a reproducir
-    -->
-    <h1>dale play al audio muchacho</h1>
-    <video src="./assets/patrocinador.mp4" width="400" 
-    controls muted loop poster="./assets/portada.jpg" ></video>
-    <h2>Aqui... no el video</h2>
-    <audio src="./assets/Demon.mp3" controls loop autoplay></audio>
+    <div id="ventana" class="ventana">
+        <h1>¡Juego de Tablas de Multiplicar!</h1>
+
+        <!-- Menú Principal -->
+        <div id="menu_principal" class="pantalla">
+            <p class="descripcion">¡Aprende las Tablas del 1 al 10 Jugando!</p>
+            <p id="puntos_totales" class="puntos">Puntos Totales: 0</p>
+
+            <p>Elige tu nivel de aventura</p>
+            <button py-click="iniciar(1)" class="boton facil">Nivel Fácil (1-3)</button>
+            <button py-click="iniciar(2)" class="boton medio">Nivel Medio (4-7)</button>
+            <button py-click="iniciar(3)" class="boton dificil">Nivel Difícil (8-10)</button>
+
+            <p class="subtexto">¡Gana puntos y desbloquea premios!</p>
+            <button py-click="salir()" class="boton salir">Salir</button>
+        </div>
+
+        <!-- Juego -->
+        <div id="juego" class="pantalla oculto">
+            <h2 id="titulo_juego">¡Vamos a multiplicar!</h2>
+            <p id="numero_pregunta"></p>
+            <p id="pregunta"></p>
+            <input id="respuesta" type="number" placeholder="Tu respuesta" class="entrada">
+            <button py-click="comprobar()" class="boton comprobar">Comprobar</button>
+
+            <p id="mensaje" class="mensaje"></p>
+            <img id="imagen" class="imagen" src="">
+            <button py-click="volver_menu()" class="boton volver">Volver al menú</button>
+        </div>
+
+        <!-- Resultado -->
+        <div id="resultado" class="pantalla oculto">
+            <h2>¡Nivel Completado!</h2>
+            <p id="puntaje"></p>
+            <p id="puntos_ganados"></p>
+            <p id="total"></p>
+            <div id="premio" class="premio"></div>
+            <img id="imagen_premio" class="imagen" src="">
+            <p id="mensaje_extra"></p>
+            <button py-click="volver_menu()" class="boton volver">Volver al menú principal</button>
+        </div>
+    </div>
+
+    <py-script src="main.py"></py-script>
 </body>
 </html>
