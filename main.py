@@ -50,11 +50,11 @@ def comprobar():
             puntaje += 1
             msg.innerText = random.choice(["¡Excelente! ¡Eres un genio!", "¡Perfecto!", "¡Muy bien hecho!"])
             msg.style.color = "purple"
-            img.src = "imagenes/perfecto.jpg"
+            img.src = "perfecto.jpg"
         else:
             msg.innerText = f"Ups... era {respuesta_correcta}. ¡Sigue intentando!"
             msg.style.color = "red"
-            img.src = "imagenes/pesimo.jpg"
+            img.src = "pesimo.jpg"
     except:
         msg.innerText = "Por favor ingresa un número válido"
         msg.style.color = "blue"
